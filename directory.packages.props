@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup Label="Configure packages">
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+    <NetVersion>10.0.0</NetVersion>
+  </PropertyGroup>
+
+  <!-- Theses packages will be used by every project in a repository. Theses packages are added to the PackageReference with the following metadata -->
+  <!-- IncludeAssets="analyzers,build,contentfiles,native,runtime" and PrivateAssets="all" -->
+  <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management#global-package-references -->
+  <ItemGroup Label="Global analyzers">
+    <GlobalPackageReference Include="AsyncFixer" Version="1.6.0" />
+    <GlobalPackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.14.1" />
+    <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
+  </ItemGroup>
+
+  <ItemGroup Label="Packages">
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.39" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" />
+  </ItemGroup>
+</Project>

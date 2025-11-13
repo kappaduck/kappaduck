@@ -1,0 +1,6 @@
+is_global = true
+
+# VSTHRD111: Consider calling ConfigureAwait on the awaited task
+# No need to use ConfigureAwait because this is not a library code.
+# https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD111.md
+dotnet_diagnostic.VSTHRD111.severity = none

@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/configurations/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="directory.build.props" />
+    <File Path="directory.packages.props" />
+    <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/configurations/.github/">
+    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
+    <File Path=".github/codeowners" />
+    <File Path=".github/dependabot.yml" />
+  </Folder>
+  <Folder Name="/configurations/rules/">
+    <File Path="rules/code.style.editorconfig" />
+    <File Path="rules/disabled.editorconfig" />
+    <File Path="rules/roslynator.editorconfig" />
+    <File Path="rules/sonar.editorconfig" />
+    <File Path="rules/underscore.editorconfig" />
+    <File Path="rules/vsthrd.editorconfig" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="changelog.md" />
+    <File Path="license" />
+    <File Path="readme.md" />
+  </Folder>
+  <Project Path="src/Web.App/Web.App.csproj" />
+</Solution>
