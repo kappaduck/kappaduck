@@ -10,6 +10,7 @@
   <Folder Name="/configurations/.github/">
     <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
     <File Path=".github/ISSUE_TEMPLATE/config.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
     <File Path=".github/codeowners" />
     <File Path=".github/dependabot.yml" />
   </Folder>
