@@ -23,6 +23,7 @@ internal static class HostExtensions
 
             builder.ConfigureOptions();
 
+            builder.Services.AddMemoryCache();
             builder.Services.AddSingleton(sp => (IJSInProcessRuntime)sp.GetRequiredService<IJSRuntime>());
             builder.Services.AddHttpClient<ProjectHttpClient>();
         }
@@ -37,6 +38,10 @@ internal static class HostExtensions
 
         private void ConfigureOptions()
         {
+            builder.Services.Configure<CacheOptions>(builder.Configuration.GetRequiredSection(CacheOptions.Section))
+                            .AddSingleton<IValidateOptions<CacheOptions>, CacheOptions.Validator>()
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<CacheOptions>>().Value);
+
             builder.Services.Configure<ProjectOptions>(builder.Configuration.GetRequiredSection(ProjectOptions.Section))
                             .AddSingleton<IValidateOptions<ProjectOptions>, ProjectOptions.Validator>()
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<ProjectOptions>>().Value);
