@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup Label="Configure packages to be centralized">
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+    <NetVersion>11.0.0-preview.2.26159.112</NetVersion>
+  </PropertyGroup>
+
+  <ItemGroup Label="Global analyzers">
+    <GlobalPackageReference Include="AsyncFixer" Version="2.1.0" />
+    <GlobalPackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.15.0" />
+    <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.22.0.136894" />
+  </ItemGroup>
+
+  <ItemGroup Label="packages">
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="2.0.2" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+  </ItemGroup>
+</Project>
