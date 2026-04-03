@@ -9,6 +9,8 @@ internal static class Icons
 
     internal const string Controller = "bi bi-controller";
 
+    internal const string CodeSlash = "bi bi-code-slash";
+
     internal const string Github = "bi bi-github";
 
     internal const string Joystick = "bi bi-joystick";
@@ -17,7 +19,7 @@ internal static class Icons
 
     internal const string Sun = "bi bi-sun";
 
-    internal const string Terminal = "bi bi-terminal";
+    internal const string Tools = "bi bi-tools";
 
     internal const string Window = "bi bi-window";
 }

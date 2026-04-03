@@ -1,3 +1,5 @@
+@using Web.App.Projects
+
 @page "/"
 
 <section class="intro">
@@ -7,14 +9,15 @@
 </section>
 
 <div class="filter-bar">
-	<button class="pill active">All</button>
-	<button class="pill">Libraries</button>
-	<button class="pill">Game</button>
-	<button class="pill">Misc</button>
-	<button class="pill">App</button>
+	<button class="pill @IsTypeActiveCss(null)">All</button>
+	@foreach (ProjectType type in _types)
+	{
+		<button class="pill @IsTypeActiveCss(type)" @onclick="() => SelectProjectType(type)">@type.Name</button>
+	}
 </div>
 <main class="projects">
-	<ProjectCard />
-	<ProjectCard />
-	<ProjectCard />
+	@foreach (Project project in FilteredProjects)
+	{
+		<ProjectCard Project="project" />
+	}
 </main>

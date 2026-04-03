@@ -1,12 +1,30 @@
-<div class="card" data-tag="misc">
+@using Web.App.Projects
+
+<div class="card" data-tag="@Project.Type.Name">
 	<div class="card-top">
-		<i class="card-icon @Icons.Controller"></i>
-		<span class="card-tag">Game</span>
+		<i class="card-icon @TagIcon"></i>
+		<span class="card-tag">@Project.Type.Name</span>
 	</div>
-	<div class="card-name">A Link to the Past</div>
-	<div class="card-description">Clone of the classic SNES game</div>
+	<div class="card-name">@Project.Name</div>
+	<div class="card-description">@Project.Description</div>
 	<div class="card-footer">
-		<span class="card-tech">C# &middot; SDL3</span>
+		<span class="card-tech">@Tags</span>
 		<i class="@Icons.BoxArrowUpRight card-arrow"></i>
 	</div>
 </div>
+
+@code {
+	[Parameter, EditorRequired]
+	public required Project Project { get; init; }
+
+	private string TagIcon => Project.Type switch
+	{
+		ProjectType.App => Icons.Window,
+		ProjectType.Emulator => Icons.Joystick,
+		ProjectType.Game => Icons.Controller,
+		ProjectType.Libraries => Icons.CodeSlash,
+		ProjectType.Tools => Icons.Tools
+	};
+
+	private MarkupString Tags => new(string.Join("&middot;", Project.Tags));
+}
