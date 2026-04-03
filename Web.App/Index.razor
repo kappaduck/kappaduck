@@ -1,3 +1,20 @@
 @page "/"
 
-<div>Hello, KappaDuck!</div>
+<section class="intro">
+	<div class="tech-stack">Open source &middot; C# &middot; .NET</div>
+	<h1 class="title">Building apps,<br /><span class="highlight">games &amp; libraries.</span></h1>
+	<p class="sub-title">A collection of software projects by a passionate C# developer. From libraries to productivity apps &ndash; all open source.</p>
+</section>
+
+<div class="filter-bar">
+	<button class="pill active">All</button>
+	<button class="pill">Libraries</button>
+	<button class="pill">Game</button>
+	<button class="pill">Misc</button>
+	<button class="pill">App</button>
+</div>
+<main class="projects">
+	<ProjectCard />
+	<ProjectCard />
+	<ProjectCard />
+</main>
