@@ -1,5 +1,7 @@
-@inherits LayoutComponentBase
+@using Web.App.Options
 
+@inherits LayoutComponentBase
+@inject ProjectOptions project
 <header>
 	<a class="nav-logo" href="/">
 		<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +19,7 @@
 	</a>
 	<nav>
 		<div class="nav-links">
-			<a href="https://github.com/kappaduck/kappaduck" target="_blank" class="github-link">
+			<a href="@project.Url" target="_blank" class="github-link">
 				<i class="@Icons.Github"></i>
 				<span>GitHub</span>
 			</a>
@@ -31,5 +33,5 @@
 @Body
 <footer>
 	<span class="copy">&copy; @DateTime.Now.Year <strong>KappaDuck</strong>. All rights reserved.</span>
-	<span class="right">Build with Blazor &middot; Open source</span>
+	<span class="right">Build with Blazor &middot; @project.Version</span>
 </footer>
