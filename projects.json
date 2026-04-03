@@ -15,7 +15,7 @@
   },
   {
     "name": "Quack.runtimes",
-    "type": "misc",
+    "type": "tools",
     "tags": [ "Bash", "SDL3", "Runtimes" ],
     "description": "Build and produces SDL3 native binaries for Quack!",
     "url": "https://github.com/kappaduck/quack.runtimes"
