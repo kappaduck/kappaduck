@@ -20,6 +20,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\projects.json" Link="projects.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <StaticWebAssetFingerprintPattern Include="JSModule" Pattern="*.js" Expression="#[.{fingerprint}]!" />
   </ItemGroup>
 
