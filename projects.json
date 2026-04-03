@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Atlas",
+    "type": "game",
+    "tags": [ "C#", "Blazor" ],
+    "description": "Web game to test your knowledge of the countries and flags. Can you guess the country shape or the flag?",
+    "url": "https://atlas.kappaduck.com/"
+  },
+  {
+    "name": "Quack!",
+    "type": "libraries",
+    "tags": [ "C#", "SDL3", "Interop" ],
+    "description": "A modern, lightweight and fast game framework built on top of SDL3 and its extensions SDL_image, SDL_mixer and SDL_ttf.",
+    "url": "https://github.com/kappaduck/quack"
+  },
+  {
+    "name": "Quack.runtimes",
+    "type": "misc",
+    "tags": [ "Bash", "SDL3", "Runtimes" ],
+    "description": "Build and produces SDL3 native binaries for Quack!",
+    "url": "https://github.com/kappaduck/quack.runtimes"
+  }
+]
