@@ -1,0 +1,105 @@
+html {
+  &:has([data-theme="dark" i]) {
+    color-scheme: dark;
+
+    .icon-sun {
+      display: none;
+    }
+  }
+
+  &:has([data-theme="light" i]) {
+    .icon-moon {
+      display: none;
+    }
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2rem;
+  border-bottom: 0.5px solid var(--quack-border-400);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background .2s, border-color .2s;
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .nav-title {
+      font-size: var(--quack-text-md);
+      font-weight: 500;
+      letter-spacing: .01em;
+
+      .kappa {
+        color: var(--quack-primary-text);
+      }
+
+      .duck {
+        color: var(--quack-accent-text);
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        font-size: var(--quack-text-sm);
+        color: var(--quack-secondary-text);
+      }
+
+      .github-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 14px;
+        border-radius: var(--quack-radius-pill);
+        border: 0.5px solid var(--quack-border-400);
+        font-size: var(--quack-text-sm);
+
+        &:hover {
+          background: var(--quack-elevated);
+          color: var(--quack-accent-text);
+          border-color: var(--quack-accent-text);
+        }
+      }
+    }
+
+    .theme-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 0.5px solid var(--quack-border-400);
+      background: var(--quack-surface);
+      cursor: pointer;
+
+      &:hover {
+        background: var(--quack-elevated);
+        color: var(--quack-accent-text);
+        border-color: var(--quack-accent-text);
+      }
+
+      i {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
