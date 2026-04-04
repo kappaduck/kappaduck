@@ -22,7 +22,7 @@ public sealed partial class Index(ProjectHttpClient client) : IDisposable
         _types = [.. _projects.Select(p => p.Type).Distinct().Order()];
     }
 
-    private void SelectProjectType(ProjectType type) => _selectedType = type;
+    private void SelectProjectType(ProjectType? type) => _selectedType = type;
 
     private string IsTypeActiveCss(ProjectType? type)
         => _selectedType == type ? "active" : string.Empty;

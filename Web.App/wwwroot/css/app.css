@@ -9,6 +9,8 @@ html {
   }
 
   &:has([data-theme="light" i]) {
+    color-scheme: light;
+
     .icon-moon {
       display: none;
     }
@@ -25,7 +27,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background .2s, border-color .2s;
 
   .nav-logo {
     display: flex;
@@ -205,20 +206,25 @@ header {
 
   &[data-tag='app' i] {
     --tag-background: light-dark(var(--quack-gold-100), var(--quack-gold-900));
-    --tag-color: light-dark(var(--quack-gold-200), var(--quack-gold-400));
+    --tag-color: light-dark(var(--quack-gold-400), var(--quack-gold-400));
+  }
+
+  &[data-tag='emulator' i] {
+    --tag-background: light-dark(var(--quack-blue-50), var(--quack-blue-900));
+    --tag-color: light-dark(var(--quack-blue-800), var(--quack-blue-200));
   }
 
   &[data-tag='game' i] {
     --tag-background: light-dark(var(--quack-teal-50), var(--quack-teal-900));
-    --tag-color: light-dark(var(--quack-teal-100), var(--quack-teal-200));
+    --tag-color: light-dark(var(--quack-teal-400), var(--quack-teal-200));
   }
 
   &[data-tag='libraries' i] {
     --tag-background: light-dark(var(--quack-purple-100), var(--quack-base-700));
-    --tag-color: light-dark(var(--quack-purple-200), var(--quack-purple-200));
+    --tag-color: light-dark(var(--quack-purple-400), var(--quack-purple-200));
   }
 
-  &[data-tag='misc' i] {
+  &[data-tag='tools' i] {
     --tag-background: light-dark(var(--quack-gray-100), var(--quack-gray-900));
     --tag-color: light-dark(var(--quack-gray-600), var(--quack-gray-400))
   }
@@ -284,7 +290,7 @@ header {
   .card-arrow {
     width: 18px;
     height: 18px;
-    opacity: .2;
+    opacity: .3;
     transition: opacity .15s, transform .15s;
   }
 }

@@ -1,7 +1,9 @@
+@using System.Runtime.InteropServices.JavaScript
 @using Web.App.Options
 
 @inherits LayoutComponentBase
 @inject ProjectOptions project
+
 <header>
 	<a class="nav-logo" href="/">
 		<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +26,7 @@
 				<span>GitHub</span>
 			</a>
 		</div>
-		<button class="theme-btn" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+		<button @onclick="ToggleTheme" class="theme-btn" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
 			<i class="@Icons.Moon icon-moon"></i>
 			<i class="@Icons.Sun icon-sun"></i>
 		</button>

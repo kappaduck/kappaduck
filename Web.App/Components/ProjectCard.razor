@@ -1,6 +1,6 @@
 @using Web.App.Projects
 
-<div class="card" data-tag="@Project.Type.Name">
+<a class="card" data-tag="@Project.Type.Name" href="@Project.Url" target="_blank">
 	<div class="card-top">
 		<i class="card-icon @TagIcon"></i>
 		<span class="card-tag">@Project.Type.Name</span>
@@ -11,7 +11,7 @@
 		<span class="card-tech">@Tags</span>
 		<i class="@Icons.BoxArrowUpRight card-arrow"></i>
 	</div>
-</div>
+</a>
 
 @code {
 	[Parameter, EditorRequired]
@@ -26,5 +26,5 @@
 		ProjectType.Tools => Icons.Tools
 	};
 
-	private MarkupString Tags => new(string.Join("&middot;", Project.Tags));
+	private MarkupString Tags => new(string.Join(" &middot; ", Project.Tags));
 }

@@ -9,7 +9,7 @@
 </section>
 
 <div class="filter-bar">
-	<button class="pill @IsTypeActiveCss(null)">All</button>
+	<button class="pill @IsTypeActiveCss(null)" @onclick="() => SelectProjectType(null)">All</button>
 	@foreach (ProjectType type in _types)
 	{
 		<button class="pill @IsTypeActiveCss(type)" @onclick="() => SelectProjectType(type)">@type.Name</button>
