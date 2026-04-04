@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
   <PropertyGroup>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
@@ -18,6 +18,10 @@
   <PropertyGroup Condition="'$(Configuration)' == 'release'">
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\projects.json" Link="projects.json" />
+  </ItemGroup>
 
   <ItemGroup>
     <StaticWebAssetFingerprintPattern Include="JSModule" Pattern="*.js" Expression="#[.{fingerprint}]!" />

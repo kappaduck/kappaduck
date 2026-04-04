@@ -24,6 +24,9 @@
   <Folder Name="/workflows/">
     <File Path=".github/workflows/build.yml" />
     <File Path=".github/workflows/codeql.yml" />
+    <File Path=".github/workflows/production.yml" />
+    <File Path=".github/workflows/pull-request.yml" />
+    <File Path=".github/workflows/staging.yml" />
   </Folder>
   <Project Path="Web.App/Web.App.csproj" />
 </Solution>

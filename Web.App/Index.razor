@@ -1,3 +1,23 @@
+@using Web.App.Projects
+
 @page "/"
 
-<div>Hello, KappaDuck!</div>
+<section class="intro">
+	<div class="tech-stack">Open source &middot; C# &middot; .NET</div>
+	<h1 class="title">Building apps,<br /><span class="highlight">games &amp; libraries.</span></h1>
+	<p class="sub-title">A collection of software projects by a passionate C# developer. From libraries to productivity apps &ndash; all open source.</p>
+</section>
+
+<div class="filter-bar">
+	<button class="pill @IsTypeActiveCss(null)" @onclick="() => SelectProjectType(null)">All</button>
+	@foreach (ProjectType type in _types)
+	{
+		<button class="pill @IsTypeActiveCss(type)" @onclick="() => SelectProjectType(type)">@type.Name</button>
+	}
+</div>
+<main class="projects">
+	@foreach (Project project in FilteredProjects)
+	{
+		<ProjectCard Project="project" />
+	}
+</main>

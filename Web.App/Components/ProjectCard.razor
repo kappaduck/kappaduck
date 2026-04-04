@@ -1,0 +1,30 @@
+@using Web.App.Projects
+
+<a class="card" data-tag="@Project.Type.Name" href="@Project.Url" target="_blank">
+	<div class="card-top">
+		<i class="card-icon @TagIcon"></i>
+		<span class="card-tag">@Project.Type.Name</span>
+	</div>
+	<div class="card-name">@Project.Name</div>
+	<div class="card-description">@Project.Description</div>
+	<div class="card-footer">
+		<span class="card-tech">@Tags</span>
+		<i class="@Icons.BoxArrowUpRight card-arrow"></i>
+	</div>
+</a>
+
+@code {
+	[Parameter, EditorRequired]
+	public required Project Project { get; init; }
+
+	private string TagIcon => Project.Type switch
+	{
+		ProjectType.App => Icons.Window,
+		ProjectType.Emulator => Icons.Joystick,
+		ProjectType.Game => Icons.Controller,
+		ProjectType.Libraries => Icons.CodeSlash,
+		ProjectType.Tools => Icons.Tools
+	};
+
+	private MarkupString Tags => new(string.Join(" &middot; ", Project.Tags));
+}
