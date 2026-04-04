@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['Web.App/**', .github/workflows/build.yml, .github/workflows/staging.yml]
+    paths: ['Web.App/**', 'Directory.Build.props', 'Directory.Packages.props', .github/workflows/build.yml, .github/workflows/staging.yml]
 
 jobs:
   staging:
