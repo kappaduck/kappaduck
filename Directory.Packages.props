@@ -2,7 +2,6 @@
   <PropertyGroup Label="Configure packages to be centralized">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
-    <NetVersion>11.0.0-preview.2.26159.112</NetVersion>
   </PropertyGroup>
 
   <ItemGroup Label="Global analyzers">
@@ -14,11 +13,11 @@
 
   <ItemGroup Label="packages">
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="2.0.2" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="11.0.0-preview.2.26159.112" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="11.0.0-preview.2.26159.112" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="11.0.0-preview.2.26159.112" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="11.0.0-preview.2.26159.112" />
+    <PackageVersion Include="Microsoft.Extensions.Localization" Version="11.0.0-preview.2.26159.112" />
     <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="6.0.3" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
   </ItemGroup>
 </Project>
