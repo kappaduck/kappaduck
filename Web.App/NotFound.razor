@@ -1,0 +1,19 @@
+@page "/not-found"
+@layout MainLayout
+@inject NavigationManager navigation
+
+<PageTitle>404 &mdash; KappaDuck</PageTitle>
+
+<main class="not-found">
+	<div class="background-404">404</div>
+	<div class="content-404">
+		<div class="duck-container">
+			<Duck Size="100" />
+			<div class="speech-bubble">...quack?</div>
+		</div>
+		<div class="error-404">Error 404</div>
+		<h1>Quack! <span class="highlight">That's not a page.</span></h1>
+		<p class="subtext">Looks like this URL swam off somewhere. The page <code>@navigation.Uri[(navigation.Uri.LastIndexOf('/') + 1)..]</code> doesn't exist &ndash; maybe it was moved, deleted, or never quacked into existence.</p>
+		<a href="/" class="btn-primary">Back to safety</a>
+	</div>
+</main>
