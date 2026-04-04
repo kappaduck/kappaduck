@@ -9,8 +9,7 @@ public enum ProjectType
     Emulator = 1,
     Game = 2,
     Libraries = 3,
-    Tools = 4,
-    Misc = 5
+    Tools = 4
 }
 
 public static class ProjectTypeExtensions
@@ -23,8 +22,7 @@ public static class ProjectTypeExtensions
             ProjectType.Emulator => nameof(ProjectType.Emulator),
             ProjectType.Game => nameof(ProjectType.Game),
             ProjectType.Libraries => nameof(ProjectType.Libraries),
-            ProjectType.Tools => nameof(ProjectType.Tools),
-            _ => nameof(ProjectType.Emulator),
+            ProjectType.Tools => nameof(ProjectType.Tools)
         };
     }
 }
