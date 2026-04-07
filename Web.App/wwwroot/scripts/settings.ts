@@ -1,10 +1,10 @@
 export function toggleTheme(): void {
   const app: Element | null = document.querySelector('#app');
-  const currentTheme: string | null = localStorage.getItem('theme');
+  const currentTheme: string = localStorage.getItem('theme') ?? 'dark';
 
-  const newTheme = (currentTheme && currentTheme == 'dark') ? 'light' : 'dark';
+  const newTheme = currentTheme == 'dark' ? 'light' : 'dark';
 
-  app?.setAttribute('data-theme', newTheme);
+  SetTheme(newTheme);
   localStorage.setItem('theme', newTheme);
 }
 
