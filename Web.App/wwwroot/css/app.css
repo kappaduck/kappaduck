@@ -20,7 +20,7 @@ html {
 #app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
 
   &[data-theme] {
     transition: background 750ms ease-in-out;
@@ -291,7 +291,7 @@ header {
 
   .card-tech {
     font-size: var(--quack-text-xs);
-    color: var(--quack-gray-600);
+    color: light-dark(var(--quack-purple-600), var(--quack-teal-400));
     font-family: 'JetBrains Mono', monospace;
   }
 
@@ -313,14 +313,10 @@ footer {
   padding-top: 1.25rem;
   padding-inline: 1rem;
   border-top: 0.5px solid var(--quack-border-200);
+  font-size: var(--quack-text-xs);
+  color: light-dark(var(--quack-gray-700), var(--quack-gray-400));
 
-  .copy,
-  .right {
-    font-size: var(--quack-text-xs);
-    color: light-dark(var(--quack-gray-700), var(--quack-gray-600))
-  }
-
-  .copy>strong {
+  .copy > strong {
     color: var(--quack-primary-text);
     font-weight: 500;
   }
